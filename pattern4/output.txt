@@ -1,0 +1,3 @@
+Enter the value for a: 
+Enter the value for b 
+2 grater than 1
