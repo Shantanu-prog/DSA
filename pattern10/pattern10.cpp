@@ -1,26 +1,27 @@
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// void printalpha(int n)
-// {
-//  for (int i = 1; i <= n; i++)
-//  {
-//     for (int j = 1; j <= n; j++)
-//     {
-//      char ch = ('A' + j - 1);
-//      cout << ch << " ";
-//     }
-//     cout << endl;
-//  }
+void printalpha(int n)
+{
+ for (int i = 1; i <= n; i++)
+ {
+    for (int j = 1; j <= n; j++)
+    {
+     char ch = ('A' + j - 1);
+     cout << ch << " ";
+    }
+    cout << endl;
+ }
  
-// }
-// int main()
-// {
-//     int n;
-//     cin >> n;
-//     printalpha(n);
-//     return 0;
-// }
+}
+int main()
+{
+    int n;
+    cin >> n;
+    printalpha(n);
+    return 0;
+}
+         //OR       
 
 #include<iostream>
 using namespace std;
