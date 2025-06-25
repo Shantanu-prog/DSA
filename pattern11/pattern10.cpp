@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+
+void printalpha(int n)
+{
+  char start = 'A';
+  int i = 1;
+  while (i <= n)
+  {
+    int j = 1;
+    while (j <= n)
+    {
+      char ch = start;
+      cout << ch << " ";
+      start++;
+      j++;
+    }
+    cout << endl;
+    i++;
+  }
+  
+}
+int main()
+{
+    int n;
+    cin >> n;
+    printalpha(n);
+    return 0;
+}
+
+       //OR
+
+#include<iostream>
+using namespace std;
+
+void printalpha(int n)
+{
+  char start = 'A';
+  for (int i = 1; i <= n; i++)
+  {
+    for(int j = 1; j <= n; j++)
+    {
+        cout << start << " ";
+        start++;
+    }
+    cout << endl;
+  }
+  
+}
+int main()
+{
+    int n;
+    cin >> n;
+    printalpha(n);
+    return 0;
+}
