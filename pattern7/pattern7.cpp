@@ -31,13 +31,11 @@
 using namespace std;
 
 void printnum(int n) {
-    int value = 1;
-    for (int i = 0; i <= n; i++) {
-        for (int j = 0; j <= i; j++) { 
-            cout << setw(3) << value << " ";
-            value++;
+    for (int i = 1; i <= n; i++) { 
+        for (int j = 1; j <= i; j++) {
+            cout << setw(3) << (i + j - 1)<< " ";
         }
-      cout << endl;
+        cout << endl;
     }
 }
 
@@ -47,3 +45,4 @@ int main() {
     printnum(n);
     return 0;
 }
+
