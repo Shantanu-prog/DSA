@@ -19,7 +19,7 @@
         //star
         for(int str = 1; str <= n - i; str++)
         {
-            cout << "* ";
+            cout << "* "; 
         }
         spc +=2;
         cout << '\n';
