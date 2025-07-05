@@ -3,7 +3,7 @@ using namespace std;
 
 void prime(int n)
 {
-    for(int i = 2; i <= n; i++)
+    for(int i = 2; i < n; i++)
     {
         if( n % i == 0) //rem = 0
         {
@@ -13,6 +13,7 @@ void prime(int n)
         else 
         {
             cout << "its a prime number" << '\n';
+            break;
         }
     }
 }
