@@ -34,4 +34,4 @@ int main()
         default : cout << "Enter a valid number" << '\n';
 
     }
-} 
+}              
