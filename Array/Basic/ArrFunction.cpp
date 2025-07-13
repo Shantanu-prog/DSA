@@ -23,6 +23,9 @@ void printArray(int arr[], int size)
     
         //accessing an array
         printArray(third, 15);
+
+        int thirdsize = sizeof(third)/sizeof(int);
+        cout << "size of third is " << thirdsize << endl;
     
         return 0;
     }
