@@ -38,6 +38,7 @@ void vectorExplained(){
     
     
     vector<int> v0(5);
+    v0.emplace_back(1);
     for(int x : v0) cout << x << " ";
     cout << endl;
 
