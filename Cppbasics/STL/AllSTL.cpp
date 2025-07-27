@@ -178,6 +178,104 @@ void stackExplained(){
     
     stack<int>st1, st2;
     st1.swap(st2);
+
+    //these all happens in O(1).
+}
+void QueueExplained(){
+    queue<int> q;
+    q.push(1); //{1}
+    q.push(2); // {1, 2}
+    q.emplace(4); // {1, 2, 4}
+
+    q.back() += 5; //this add 5 in the last element {1, 2, 9}
+
+    cout << q.back(); // print 9
+
+    //Q is { 1, 2, 9}
+    cout << q.front(); //prints 1
+
+    q.pop(); // {2, 9}
+
+    cout << q.front(); //print 2
+
+    //size, swap, empty, same as stack
+
+}
+void PriorityExplained(){
+    priority_queue<int>pq; //insted of queue there can be any data type
+
+    pq.push(5); //{5}
+    pq.push(2); //{5, 2}
+    pq.push(8); // {8, 5, 2}
+    pq.emplace(10);// {10, 8, 5, 2}
+
+    cout << pq.top(); // prints 10
+    
+    pq.pop(); // {8, 5, 2}
+
+    cout << pq.top(); //prints 8
+
+    //size, swap, empty, function same as others
+
+    // Minimum Heap
+    // priority_queue< T , Container , Compare > is the full template signature.
+    //T -->is the type you’re storing (int).
+    //Container --> is the underlying container (by default vector<T>).
+    //Compare --> is the comparator that defines the heap order (by default less<T>, which gives you a max‑heap).
+    //By specifying greater<int> as the comparator, you’re telling C++ to arrange elements so that the smallest element is always at the top → this makes it a min‑heap instead of the default max‑heap.
+    priority_queue<int, vector<int>, greater<int>> pq;
+    pq.push(5); //{5}
+    pq.push(2); // {2, 5}
+    pq.push(8); // {2, 5. 8}
+    pq.emplace(10); // {2, 5, 8, 10}
+
+    cout << pq.top(); //prints 2
+
+    //push and pop happens log(n) and top happens O(1)
+}
+void SetExpalined(){
+    //set store unique and stores in shorted ordered
+   set<int>st;
+   st.insert(1); // {1}
+   st.emplace(2); // { 1, 2}
+   st.insert(2); // { 1, 2}
+   st.emplace(4); //{ 1, 2, 4}
+   st.insert(3); // {1, 2, 3, 4}
+
+   // Functionality of insert in vector
+   //can be used also, that only increases
+   //efficiency
+
+   //begin(), end(), rbegin(), rend(), size(),
+   // empty() and swap() are same as those of above
+
+   // {1, 2, 3, 4, 5}
+   auto it = st.find(3);
+
+   // {1, 2, 3, 4, 5}
+   auto it = st.find(6);
+
+   // {1, 4, 5}
+   st.erase(5); //erase 5 // takes logarithmic time
+   
+   int count = st.count(1); //
+   
+   auto it = st.find(3);
+   st.erase(it); // it takes constant time
+
+   // { 1, 2, 3, 4, 5 }
+   auto it1 = st.find(3);
+   auto it2 = st.find(4);
+   st.erase(it1, it2); //after erase {1, 4, 5} [first, last)
+
+   //lower_bound() and upper_bound() function works in the same way
+   // as in vector it does.
+
+   // this is the syntax
+   auto it = st.lower_bound(2);
+
+   auto it = st.upper_bound(3);
+
 }
 int main(){
     ListExplained();
