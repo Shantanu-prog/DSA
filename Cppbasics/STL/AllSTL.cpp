@@ -223,11 +223,11 @@ void PriorityExplained(){
     //Container --> is the underlying container (by default vector<T>).
     //Compare --> is the comparator that defines the heap order (by default less<T>, which gives you a max‑heap).
     //By specifying greater<int> as the comparator, you’re telling C++ to arrange elements so that the smallest element is always at the top → this makes it a min‑heap instead of the default max‑heap.
-    priority_queue<int, vector<int>, greater<int>> pq;
-    pq.push(5); //{5}
-    pq.push(2); // {2, 5}
-    pq.push(8); // {2, 5. 8}
-    pq.emplace(10); // {2, 5, 8, 10}
+    priority_queue<int, vector<int>, greater<int>> max;
+    max.push(5); //{5}
+    max.push(2); // {2, 5}
+    max.push(8); // {2, 5. 8}
+    max.emplace(10); // {2, 5, 8, 10}
 
     cout << pq.top(); //prints 2
 
@@ -277,7 +277,79 @@ void SetExpalined(){
    auto it = st.upper_bound(3);
 
 }
+void MultiSetExplained(){
+   //everything is same as set
+   // only stores duplicate elements also
+   
+   multiset<int>ms;
+   ms.insert(1); // {1};
+   ms.insert(1); // {1, 1}
+   ms.insert(1); // {1, 1, 1}
+
+   ms.erase(1);
+
+   int cnt = ms.count(1);
+
+   //only a single one erased
+   ms.erase(ms.find(1));
+   
+   //erase multiple element
+   for(int i = 0; i < 2; i++) {           // Loop runs exactly 2 times
+    auto it = ms.find(1);              // Find first occurrence of value 1
+    if(it != ms.end()) {               // Check if 1 was found
+        ms.erase(it);                  // Remove that single occurrence
+    }
+    }
+}
+void UnorederdSetExplained(){
+    unordered_set<int> ust;
+    //lower_bound and upper_bound function
+    // does not works, rest all functions are same
+    // as above, it does not stores in any
+    // particular order it has a better complexity
+    // then set in most cases, except some when collision happens
+
+    //it woeks on O(1) but in sometimes rearly in worst case O(n)
+}
+void MapExplained(){
+
+    map<int, int> mpp;
+
+        mpp[1] = 2;
+    mpp.emplace(3, 1); // or mpp.emplace(std::make_pair(3, 1));
+    
+    mpp.insert(2, 4);
+   
+    // {
+    //     {1, 2}
+    //     {2, 4}
+    //     {3, 1} 
+    // }
+
+    map<int, pair<int, int>> mpp1;
+    map<pair<int, int>, int> mpp2;
+      
+     mpp2[{2, 3}] = 10; // {{2, 3}, 10}
+
+     for(auto it : mpp){
+        cout << it.first << " " << it.second << endl;
+     }
+
+     cout << mpp[5];
+     cout << mpp[1];
+
+     auto it = mpp.find(3); //access any element
+     cout << it->second;
+    
+     auto it = mpp.find(5); // if 5 is not in array it will point to end
+ 
+     auto it = mpp.lower_bound(2);
+     auto it = mpp.upper_bound(3);
+
+     //erase, swap, size, empty, are same as above
+}
+
 int main(){
-    ListExplained();
+    MapExplained();
     return 0;
 }
