@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 int FindNumberOfDigits(int n)
@@ -10,6 +11,8 @@ int FindNumberOfDigits(int n)
         n /= 10;
         cnt++;
      }
+     //or
+     int cnt = (int) (log10(n) + 1);
    return cnt;
 }
 int main()
