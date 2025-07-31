@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/DSA/Questions/CodeingNinja/FindUnique",
-      "program": "d:/DSA/Questions/CodeingNinja/FindUnique/build/Debug/outDebug",
+      "cwd": "d:/DSA/Questions/CodeingNinja/ReverseNumbers",
+      "program": "d:/DSA/Questions/CodeingNinja/ReverseNumbers/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
