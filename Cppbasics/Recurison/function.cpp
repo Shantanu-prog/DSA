@@ -15,4 +15,4 @@ int main()
   cin >> n;
   cout << functionalWay(n) << endl;
   return 0;
-}
+} 
