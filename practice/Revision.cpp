@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-  int oct = 052;
-  cout << oct << endl;
+  int bin = 0101010;
+  cout << bin << endl;
   return 0;
 }
